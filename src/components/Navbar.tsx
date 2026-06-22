@@ -64,7 +64,7 @@ export default function Navbar() {
             ))}
             <a
               href="#contacto"
-              className="bg-[var(--color-nonnas-mint)] hover:bg-[var(--color-nonnas-mint-dark)] text-white px-6 py-2.5 rounded-full font-medium transition-colors shadow-sm hover:shadow-md"
+              className="bg-[var(--color-nonnas-blue)]/80 hover:bg-[var(--color-nonnas-blue)]/90 backdrop-blur-md border border-white/50 text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-[0_8px_32px_rgba(43,108,176,0.2)] hover:shadow-[0_8px_32px_rgba(43,108,176,0.4)]"
             >
               Cotizar Servicio
             </a>
