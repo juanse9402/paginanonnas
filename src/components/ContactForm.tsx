@@ -90,7 +90,7 @@ export default function ContactForm() {
                 </div>
                 <div>
                   <p className="text-blue-200 text-sm">Línea de Atención</p>
-                  <p className="font-semibold text-lg">+57 300 000 0000</p>
+                  <p className="font-semibold text-lg">+57 317 437 3251</p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
@@ -186,7 +186,7 @@ export default function ContactForm() {
                         name="telefono"
                         required
                         className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:ring-2 focus:ring-[var(--color-nonnas-mint)] focus:border-[var(--color-nonnas-mint)] transition-all outline-none"
-                        placeholder="Ej. 300 123 4567"
+                        placeholder="Ej. 317 437 3251"
                       />
                     </div>
                   </div>

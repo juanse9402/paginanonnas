@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, MessageCircle, HeartPulse, ShieldCheck } from 'lucide-react';
 
 export default function Hero() {
-  const whatsappNumber = "573000000000"; // Reemplaza con el número real
+  const whatsappNumber = "573174373251"; // Reemplaza con el número real
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=Hola,%20me%20gustar%C3%ADa%20hablar%20con%20un%20asesor%20sobre%20los%20servicios%20de%20Cuidado%20Nonnas.`;
 
   return (

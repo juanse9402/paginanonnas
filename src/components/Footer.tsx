@@ -26,7 +26,7 @@ export default function Footer() {
             <h4 className="text-lg font-semibold text-white mb-4">Contacto</h4>
             <ul className="space-y-2 text-gray-400">
               <li>Email: info@cuidadononnas.com</li>
-              <li>Teléfono: +57 300 000 0000</li>
+              <li>Teléfono: +57 317 437 3251</li>
               <li>Atención 24/7</li>
             </ul>
           </div>
