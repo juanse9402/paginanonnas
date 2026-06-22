@@ -8,7 +8,7 @@ export default function Hero() {
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=Hola,%20me%20gustar%C3%ADa%20hablar%20con%20un%20asesor%20sobre%20los%20servicios%20de%20Cuidado%20Nonnas.`;
 
   return (
-    <section id="inicio" className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden bg-gradient-to-br from-blue-50 via-white to-[var(--color-nonnas-blue-light)]/30">
+    <section id="inicio" className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden bg-gradient-to-br from-blue-100 via-white to-blue-200">
       <div className="absolute inset-0 bg-dots-pattern opacity-50"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
