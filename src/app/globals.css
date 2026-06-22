@@ -27,8 +27,14 @@
   }
 }
 
-html {
-  scroll-behavior: smooth;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  section {
+    scroll-margin-top: 5rem; /* Ajuste para que la barra no tape el título */
+  }
 }
 
 body {
