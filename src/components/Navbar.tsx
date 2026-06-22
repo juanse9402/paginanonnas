@@ -39,7 +39,7 @@ export default function Navbar() {
                 <img 
                   src="/logo.png.png" 
                   alt="Cuidado Nonnas Logo" 
-                  className="h-10 w-auto object-contain"
+                  className="h-20 md:h-28 w-auto object-contain"
                   onError={() => setLogoError(true)}
                 />
               ) : (

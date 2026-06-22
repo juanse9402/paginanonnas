@@ -10,6 +10,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Cuidado Nonnas | El cuidado profesional que tus seres queridos merecen",
   description: "Brindamos tranquilidad a tu familia combinando el profesionalismo de nuestras auxiliares de enfermería con el monitoreo clínico diario que necesitas.",
+  icons: {
+    icon: '/logo.png.png',
+  },
 };
 
 export default function RootLayout({
