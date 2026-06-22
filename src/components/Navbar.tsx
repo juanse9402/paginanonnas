@@ -33,17 +33,17 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <div className="flex-shrink-0 flex items-center">
-            <a href="#inicio" className="flex items-center gap-2">
+          <div className="flex-shrink-0 flex items-center relative w-48 h-16">
+            <a href="#inicio" className="absolute -top-6 md:-top-8 left-0 flex items-center gap-2">
               {!logoError ? (
                 <img 
                   src="/logo.png.png" 
                   alt="Cuidado Nonnas Logo" 
-                  className="h-16 md:h-20 w-auto object-contain mix-blend-multiply scale-125 md:scale-150 origin-left"
+                  className="h-28 md:h-36 w-auto object-contain"
                   onError={() => setLogoError(true)}
                 />
               ) : (
-                <div className="flex items-center gap-2 text-2xl font-bold text-[var(--color-nonnas-blue)]">
+                <div className="flex items-center gap-2 text-2xl font-bold text-[var(--color-nonnas-blue)] mt-6">
                   <HeartHandshake className="h-8 w-8 text-[#2B6CB0]" />
                   <span>Cuidado Nonnas</span>
                 </div>
