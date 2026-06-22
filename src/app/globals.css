@@ -2,25 +2,43 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1e293b;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter);
+  
+  --color-nonnas-blue: #2B6CB0;
+  --color-nonnas-blue-light: #EBF8FF;
+  --color-nonnas-blue-dark: #2C5282;
+  
+  --color-nonnas-mint: #4FD1C5;
+  --color-nonnas-mint-light: #E6FFFA;
+  --color-nonnas-mint-dark: #319795;
 }
 
+/* Force light mode to maintain the clean background requested */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #F7FAFC;
+    --foreground: #1A202C;
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), sans-serif;
+}
+
+/* Patrón de puntos decorativos para fondos */
+.bg-dots-pattern {
+  background-image: radial-gradient(rgba(43, 108, 176, 0.1) 1px, transparent 1px);
+  background-size: 24px 24px;
 }
