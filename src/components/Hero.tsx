@@ -89,7 +89,7 @@ export default function Hero() {
             {/* Contenedor principal de la imagen */}
             <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white bg-gray-100 aspect-[4/5] md:aspect-square lg:aspect-[4/5] z-10">
               <img 
-                src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=800&q=80" 
                 alt="Enfermera sonriendo con adulto mayor" 
                 className="w-full h-full object-cover"
               />
