@@ -58,23 +58,23 @@ export default function Hero() {
             >
               <a 
                 href="#contacto" 
-                className="w-full sm:w-auto flex flex-col items-center justify-center gap-1 bg-[var(--color-nonnas-mint)]/80 hover:bg-[var(--color-nonnas-mint)]/90 backdrop-blur-lg border border-white/50 text-white px-8 py-3.5 rounded-full font-semibold transition-all duration-300 shadow-[0_8px_32px_rgba(79,209,197,0.3)] hover:shadow-[0_12px_40px_rgba(79,209,197,0.5)] hover:-translate-y-1"
+                className="w-full sm:w-auto flex flex-col items-center justify-center gap-1 bg-[var(--color-nonnas-mint)]/80 hover:bg-[var(--color-nonnas-mint)]/90 backdrop-blur-lg border border-white/50 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 shadow-[0_8px_32px_rgba(79,209,197,0.3)] hover:shadow-[0_12px_40px_rgba(79,209,197,0.5)] hover:-translate-y-1"
               >
-                <div className="flex items-center gap-2 text-lg">
+                <div className="flex items-center gap-2 text-base">
                   Solicitar Valoración Sin Costo
-                  <ArrowRight size={20} />
+                  <ArrowRight size={18} />
                 </div>
-                <span className="text-xs font-normal text-teal-50 opacity-90">Respuesta inmediata sin compromiso</span>
+                <span className="text-[11px] font-normal text-teal-50 opacity-90">Respuesta inmediata sin compromiso</span>
               </a>
               
               <a 
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto flex items-center justify-center gap-2 bg-white/40 hover:bg-white/60 backdrop-blur-lg border border-white/60 text-gray-800 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 shadow-[0_8px_32px_rgba(0,0,0,0.05)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.1)] hover:-translate-y-1 group"
+                className="w-full sm:w-auto flex items-center justify-center gap-2 bg-white/40 hover:bg-white/60 backdrop-blur-lg border border-white/60 text-gray-800 px-6 py-3 rounded-full font-semibold text-base transition-all duration-300 shadow-[0_8px_32px_rgba(0,0,0,0.05)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.1)] hover:-translate-y-1 group"
               >
                 Hablar con un Asesor
-                <MessageCircle size={20} className="text-green-600 group-hover:scale-110 transition-transform" />
+                <MessageCircle size={18} className="text-green-600 group-hover:scale-110 transition-transform" />
               </a>
             </motion.div>
           </div>
