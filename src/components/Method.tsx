@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function Method() {
   const [current, setCurrent] = useState(0);
@@ -69,34 +68,27 @@ export default function Method() {
       <div className="absolute top-0 left-0 w-full h-full bg-dots-pattern opacity-40 pointer-events-none"></div>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Nuestro Método: Simple y Seguro</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Comenzar es fácil y sin compromisos. Te acompañamos en cada paso para asegurar que tomes la mejor decisión.
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Nuestro Método</h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            Comenzar es fácil. Te acompañamos en cada paso.
           </p>
         </div>
 
         <div 
-          className="relative h-[350px] md:h-[300px] w-full flex items-center justify-center group"
+          className="relative h-[280px] w-full flex items-center justify-center group"
           onMouseEnter={() => setIsAutoPlaying(false)}
           onMouseLeave={() => setIsAutoPlaying(true)}
         >
-          {/* Botones de Navegación */}
-          <button 
-            className="absolute left-0 md:-left-12 z-20 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-[var(--color-nonnas-blue)] hover:bg-gray-50 transition-colors border border-gray-100 opacity-0 group-hover:opacity-100"
-            onClick={() => paginate(-1)}
-            aria-label="Paso anterior"
-          >
-            <ChevronLeft size={24} />
-          </button>
-
-          <button 
-            className="absolute right-0 md:-right-12 z-20 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-[var(--color-nonnas-blue)] hover:bg-gray-50 transition-colors border border-gray-100 opacity-0 group-hover:opacity-100"
-            onClick={() => paginate(1)}
-            aria-label="Siguiente paso"
-          >
-            <ChevronRight size={24} />
-          </button>
+          {/* Zonas de Hover para cambiar de tarjeta */}
+          <div 
+            className="absolute left-0 top-0 w-1/3 h-full z-30 cursor-w-resize"
+            onMouseEnter={() => paginate(-1)}
+          />
+          <div 
+            className="absolute right-0 top-0 w-1/3 h-full z-30 cursor-e-resize"
+            onMouseEnter={() => paginate(1)}
+          />
 
           <AnimatePresence initial={false} custom={direction}>
             <motion.div
@@ -110,25 +102,14 @@ export default function Method() {
                 x: { type: "spring", stiffness: 300, damping: 30 },
                 opacity: { duration: 0.2 }
               }}
-              drag="x"
-              dragConstraints={{ left: 0, right: 0 }}
-              dragElastic={1}
-              onDragEnd={(e, { offset, velocity }) => {
-                const swipe = swipePower(offset.x, velocity.x);
-                if (swipe < -swipeConfidenceThreshold) {
-                  paginate(1);
-                } else if (swipe > swipeConfidenceThreshold) {
-                  paginate(-1);
-                }
-              }}
-              className="absolute w-full max-w-2xl mx-auto cursor-grab active:cursor-grabbing"
+              className="absolute w-full max-w-md mx-auto"
             >
-              <div className="bg-white/80 backdrop-blur-2xl rounded-3xl p-10 md:p-14 shadow-[0_20px_50px_rgba(0,0,0,0.08)] border border-white flex flex-col items-center text-center">
-                <div className="w-24 h-24 rounded-full bg-white border-[6px] border-[var(--color-nonnas-mint-light)] flex items-center justify-center text-3xl font-extrabold text-[var(--color-nonnas-blue)] shadow-inner mb-8">
+              <div className="bg-white/90 backdrop-blur-xl rounded-2xl p-8 shadow-[0_10px_30px_rgba(0,0,0,0.08)] border border-gray-100 flex flex-col items-center text-center mx-4">
+                <div className="w-16 h-16 rounded-full bg-white border-4 border-[var(--color-nonnas-mint-light)] flex items-center justify-center text-xl font-extrabold text-[var(--color-nonnas-blue)] shadow-inner mb-4">
                   {steps[current].number}
                 </div>
-                <h3 className="text-3xl font-bold text-gray-900 mb-4">{steps[current].title}</h3>
-                <p className="text-xl text-gray-600 leading-relaxed max-w-lg">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{steps[current].title}</h3>
+                <p className="text-gray-600 leading-relaxed text-sm">
                   {steps[current].description}
                 </p>
               </div>
@@ -137,19 +118,19 @@ export default function Method() {
         </div>
 
         {/* Puntos de Paginación */}
-        <div className="flex justify-center gap-3 mt-8">
+        <div className="flex justify-center gap-2 mt-6">
           {steps.map((_, idx) => (
             <button
               key={idx}
-              onClick={() => {
+              onMouseEnter={() => {
                 setDirection(idx > current ? 1 : -1);
                 setCurrent(idx);
                 setIsAutoPlaying(false);
               }}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              className={`h-2 rounded-full transition-all duration-300 ${
                 idx === current 
-                  ? 'bg-[var(--color-nonnas-blue)] w-8' 
-                  : 'bg-gray-300 hover:bg-gray-400'
+                  ? 'bg-[var(--color-nonnas-blue)] w-6' 
+                  : 'bg-gray-300 w-2 hover:bg-gray-400'
               }`}
               aria-label={`Ir al paso ${idx + 1}`}
             />
