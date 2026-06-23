@@ -14,12 +14,28 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Cuidado Nonnas | Enfermeras a Domicilio en Bogotá",
   description: "Cuidado de adultos mayores y enfermería a domicilio 24/7 en Bogotá. Perfiles verificados, reporte diario y atención premium para tu tranquilidad.",
-  keywords: ["enfermeras a domicilio bogota", "cuidado de adultos mayores", "enfermeria 24 horas", "cuidado nonnas", "auxiliar de enfermeria bogota", "cuidado postoperatorio"],
+  keywords: [
+    "enfermeras a domicilio bogota", 
+    "cuidado de adultos mayores bogota", 
+    "enfermeria 24 horas bogota", 
+    "cuidado nonnas", 
+    "auxiliar de enfermeria bogota", 
+    "cuidado postoperatorio en casa",
+    "agencia de enfermeras bogota",
+    "cuidadoras de ancianos",
+    "enfermeras geriátricas a domicilio",
+    "cuidado de enfermos en casa",
+    "acompañamiento hospitalario bogota",
+    "inyectologia a domicilio bogota",
+    "cuidados paliativos en casa",
+    "enfermeras por turnos bogota",
+    "cuidado de pacientes postrados"
+  ],
   authors: [{ name: "Cuidado Nonnas" }],
   openGraph: {
     title: "Cuidado Nonnas | Enfermeras a Domicilio en Bogotá",
     description: "Cuidado de adultos mayores y enfermería a domicilio 24/7 en Bogotá. Perfiles verificados y atención premium.",
-    url: 'https://cuidadosnonnas.com',
+    url: 'https://www.cuidadononnas.com',
     siteName: 'Cuidado Nonnas',
     images: [
       {

@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://cuidadosnonnas.com/sitemap.xml',
+    sitemap: 'https://www.cuidadononnas.com/sitemap.xml',
   }
 }
