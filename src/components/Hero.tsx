@@ -92,8 +92,8 @@ export default function Hero() {
             {/* Contenedor principal de la imagen */}
             <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white bg-gray-100 aspect-video md:aspect-[4/3] lg:aspect-[4/3] z-10">
               <img 
-                src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=800&q=80" 
-                alt="Enfermera sonriendo con adulto mayor" 
+                src="/premium_hero.png" 
+                alt="Enfermera profesional cuidando" 
                 className="w-full h-full object-cover"
               />
               {/* Overlay sutil para la imagen */}
