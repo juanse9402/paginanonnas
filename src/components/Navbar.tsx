@@ -37,7 +37,7 @@ export default function Navbar() {
             <a href="#inicio" className="absolute -top-6 md:-top-8 left-0 flex items-center gap-2">
               {!logoError ? (
                 <img 
-                  src="/logo.png.png" 
+                  src="/logo.png" 
                   alt="Cuidado Nonnas Logo" 
                   className="h-28 md:h-36 w-auto object-contain"
                   onError={() => setLogoError(true)}
