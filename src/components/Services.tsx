@@ -33,7 +33,11 @@ export default function Services() {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Nuestros Servicios</h2>
+          <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-4">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-600 to-blue-600">
+              Servicios Diseñados para tu Tranquilidad
+            </span>
+          </h2>
           <p className="text-lg text-gray-600">
             Cuidado profesional y empático adaptado a las necesidades específicas de tu ser querido, para que no tengas que preocuparte.
           </p>
@@ -42,12 +46,12 @@ export default function Services() {
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {services.map((service, index) => (
             <motion.div
-              key={service.title}
+              key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
-              className={`relative bg-white rounded-2xl p-8 shadow-md hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 border border-gray-100 overflow-hidden group`}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className={`relative bg-white/60 backdrop-blur-2xl rounded-[2rem] p-8 shadow-[0_8px_30px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] hover:-translate-y-2 transition-all duration-300 border border-white/80 overflow-hidden group`}
             >
               {/* Línea superior decorativa */}
               <div className={`absolute top-0 left-0 w-full h-1 ${service.active ? 'bg-[var(--color-nonnas-blue)]' : 'bg-[var(--color-nonnas-mint)]'}`}></div>

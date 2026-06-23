@@ -30,7 +30,11 @@ export default function Testimonials() {
       <div className="absolute inset-0 bg-dots-pattern opacity-30"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Lo que dicen nuestras familias</h2>
+          <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-4">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[var(--color-nonnas-blue)] to-[var(--color-nonnas-mint-dark)]">
+              Lo que dicen nuestras familias
+            </span>
+          </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             La confianza no se pide, se gana. Estas son las experiencias reales de quienes han confiado el cuidado de sus seres queridos en nosotros.
           </p>
@@ -44,7 +48,7 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
-              className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 border border-teal-50 relative"
+              className="bg-white/70 backdrop-blur-xl rounded-[2rem] p-8 shadow-[0_8px_30px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] transition-all duration-300 border border-white/80 hover:-translate-y-1 relative"
             >
               <Quote className="absolute top-6 right-6 w-10 h-10 text-[var(--color-nonnas-mint)]/20" />
               <div className="flex gap-1 mb-4">

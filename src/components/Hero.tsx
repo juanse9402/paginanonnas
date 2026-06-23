@@ -30,9 +30,12 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-gray-900 tracking-tight mb-4 leading-tight"
+              className="text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tight mb-4 leading-tight"
             >
-              Recupera tu tranquilidad sabiendo que tus padres están en las mejores manos, <br className="hidden md:block" />
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-900 via-blue-800 to-gray-900">
+                Recupera tu tranquilidad sabiendo que tus padres están en las mejores manos, 
+              </span>
+              <br className="hidden md:block" />
               <span className="text-[var(--color-nonnas-blue)] relative inline-block mt-2">
                 sin salir de casa.
                 <svg className="absolute w-full h-3 -bottom-1 left-0 text-[var(--color-nonnas-mint)] opacity-70" viewBox="0 0 100 10" preserveAspectRatio="none">
@@ -58,7 +61,7 @@ export default function Hero() {
             >
               <a 
                 href="#contacto" 
-                className="w-full sm:w-auto flex flex-col items-center justify-center gap-1 bg-[var(--color-nonnas-mint)]/80 hover:bg-[var(--color-nonnas-mint)]/90 backdrop-blur-lg border border-white/50 text-white px-5 py-2.5 rounded-full font-semibold transition-all duration-300 shadow-[0_8px_32px_rgba(79,209,197,0.3)] hover:shadow-[0_12px_40px_rgba(79,209,197,0.5)] hover:-translate-y-1"
+                className="w-full sm:w-auto flex flex-col items-center justify-center gap-1 bg-gradient-to-r from-teal-400/80 to-blue-500/80 backdrop-blur-xl border border-white/50 text-white px-5 py-2.5 rounded-2xl font-semibold transition-all duration-300 shadow-[0_8px_32px_rgba(43,108,176,0.3)] hover:shadow-[0_12px_40px_rgba(43,108,176,0.5)] hover:scale-105 active:scale-95"
               >
                 <div className="flex items-center gap-2 text-sm">
                   Solicitar Valoración Sin Costo
@@ -71,7 +74,7 @@ export default function Hero() {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto flex items-center justify-center gap-2 bg-white/40 hover:bg-white/60 backdrop-blur-lg border border-white/60 text-gray-800 px-5 py-2.5 rounded-full font-semibold text-sm transition-all duration-300 shadow-[0_8px_32px_rgba(0,0,0,0.05)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.1)] hover:-translate-y-1 group"
+                className="w-full sm:w-auto flex items-center justify-center gap-2 bg-white/30 hover:bg-white/50 backdrop-blur-xl border border-white/60 text-blue-900 px-5 py-2.5 rounded-2xl font-semibold text-sm transition-all duration-300 shadow-[0_8px_32px_rgba(0,0,0,0.05)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.1)] hover:scale-105 active:scale-95 group"
               >
                 Hablar con un Asesor
                 <MessageCircle size={16} className="text-green-600 group-hover:scale-110 transition-transform" />
@@ -101,7 +104,7 @@ export default function Hero() {
             <motion.div 
               animate={{ y: [0, -10, 0] }}
               transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-              className="absolute -left-6 md:-left-12 bottom-20 bg-white p-4 rounded-2xl shadow-[0_15px_35px_rgba(0,0,0,0.1)] flex items-center gap-4 z-20 border border-gray-50"
+              className="absolute -left-6 md:-left-12 bottom-20 bg-white/70 backdrop-blur-xl p-4 rounded-[2rem] shadow-[0_15px_35px_rgba(0,0,0,0.1)] flex items-center gap-4 z-20 border border-white/60"
             >
               <div className="w-12 h-12 rounded-full bg-red-50 flex items-center justify-center">
                 <HeartPulse className="w-6 h-6 text-red-500" />
@@ -116,7 +119,7 @@ export default function Hero() {
             <motion.div 
               animate={{ y: [0, 10, 0] }}
               transition={{ repeat: Infinity, duration: 5, ease: "easeInOut", delay: 1 }}
-              className="absolute -right-6 md:-right-8 top-20 bg-white p-4 rounded-2xl shadow-[0_15px_35px_rgba(0,0,0,0.1)] flex items-center gap-4 z-20 border border-gray-50"
+              className="absolute -right-6 md:-right-8 top-20 bg-white/70 backdrop-blur-xl p-4 rounded-[2rem] shadow-[0_15px_35px_rgba(0,0,0,0.1)] flex items-center gap-4 z-20 border border-white/60"
             >
               <div className="w-10 h-10 rounded-full bg-[var(--color-nonnas-mint-light)] flex items-center justify-center">
                 <ShieldCheck className="w-5 h-5 text-[var(--color-nonnas-mint-dark)]" />

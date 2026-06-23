@@ -26,8 +26,10 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/95 backdrop-blur-md shadow-sm py-3' : 'bg-white py-4 shadow-sm'
+      className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+        isScrolled 
+          ? 'bg-white/60 backdrop-blur-2xl shadow-[0_4px_30px_rgba(0,0,0,0.05)] border-b border-white/40 py-3' 
+          : 'bg-white/30 backdrop-blur-md border-b border-white/20 py-4 shadow-sm'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -64,7 +66,7 @@ export default function Navbar() {
             ))}
             <a
               href="#contacto"
-              className="bg-[var(--color-nonnas-mint)] hover:bg-[var(--color-nonnas-mint-dark)] text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-sm hover:shadow-md"
+              className="bg-gradient-to-r from-teal-400/80 to-blue-500/80 backdrop-blur-xl border border-white/50 text-white px-6 py-2.5 rounded-2xl font-medium transition-all shadow-[0_8px_32px_rgba(43,108,176,0.2)] hover:shadow-[0_8px_32px_rgba(43,108,176,0.4)] hover:scale-105 active:scale-95"
             >
               Cotizar Servicio
             </a>
