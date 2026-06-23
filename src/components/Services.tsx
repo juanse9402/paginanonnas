@@ -1,6 +1,5 @@
 'use client';
 
-import { HeartHandshake, Stethoscope, Syringe, CheckCircle2 } from 'lucide-react';
 import { HeartHandshake, Stethoscope, Syringe, CheckCircle2, Activity } from 'lucide-react';
 import { motion } from 'framer-motion';
 
