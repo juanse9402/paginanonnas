@@ -147,9 +147,9 @@ export default function Hero() {
             <motion.div 
               animate={{ y: [0, 10, 0] }}
               transition={{ repeat: Infinity, duration: 5, ease: "easeInOut", delay: 1 }}
-              className="absolute -right-6 md:-right-8 top-20 bg-white/70 backdrop-blur-xl p-4 rounded-[2rem] shadow-[0_15px_35px_rgba(0,0,0,0.1)] flex items-center gap-4 z-20 border border-white/60"
+              className="absolute -right-6 md:-right-8 bottom-12 md:bottom-24 bg-white/80 backdrop-blur-xl p-4 rounded-[2rem] shadow-[0_15px_35px_rgba(0,0,0,0.15)] flex items-center gap-4 z-20 border border-white/60"
             >
-              <div className="w-10 h-10 rounded-full bg-[var(--color-nonnas-mint-light)] flex items-center justify-center">
+              <div className="w-10 h-10 rounded-full bg-[var(--color-nonnas-mint-light)] flex items-center justify-center flex-shrink-0">
                 <ShieldCheck className="w-5 h-5 text-[var(--color-nonnas-mint-dark)]" />
               </div>
               <div>
