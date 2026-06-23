@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 export default function Method() {
   const [current, setCurrent] = useState(0);
@@ -67,7 +67,7 @@ export default function Method() {
     <section id="metodo" className="py-24 bg-white relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-full bg-dots-pattern opacity-40 pointer-events-none"></div>
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Nuestro Método</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
@@ -76,45 +76,51 @@ export default function Method() {
         </div>
 
         <div 
-          className="relative h-[280px] w-full flex items-center justify-center group"
+          className="relative h-[320px] w-full flex items-center justify-center group perspective-1000"
           onMouseEnter={() => setIsAutoPlaying(false)}
           onMouseLeave={() => setIsAutoPlaying(true)}
         >
-          {/* Zonas de Hover para cambiar de tarjeta */}
-          <div 
-            className="absolute left-0 top-0 w-1/3 h-full z-30 cursor-w-resize"
-            onMouseEnter={() => paginate(-1)}
-          />
-          <div 
-            className="absolute right-0 top-0 w-1/3 h-full z-30 cursor-e-resize"
-            onMouseEnter={() => paginate(1)}
-          />
+          {steps.map((step, index) => {
+            // Calcular posiciones relativas
+            let position = 0; // 0 = centro, -1 = izquierda, 1 = derecha
+            if (index === current) position = 0;
+            else if (index === (current - 1 + steps.length) % steps.length) position = -1;
+            else if (index === (current + 1) % steps.length) position = 1;
 
-          <AnimatePresence initial={false} custom={direction}>
-            <motion.div
-              key={current}
-              custom={direction}
-              variants={slideVariants}
-              initial="enter"
-              animate="center"
-              exit="exit"
-              transition={{
-                x: { type: "spring", stiffness: 300, damping: 30 },
-                opacity: { duration: 0.2 }
-              }}
-              className="absolute w-full max-w-md mx-auto"
-            >
-              <div className="bg-white/90 backdrop-blur-xl rounded-2xl p-8 shadow-[0_10px_30px_rgba(0,0,0,0.08)] border border-gray-100 flex flex-col items-center text-center mx-4">
-                <div className="w-16 h-16 rounded-full bg-white border-4 border-[var(--color-nonnas-mint-light)] flex items-center justify-center text-xl font-extrabold text-[var(--color-nonnas-blue)] shadow-inner mb-4">
-                  {steps[current].number}
+            return (
+              <motion.div
+                key={step.number}
+                initial={false}
+                animate={{
+                  x: `${position * 100}%`,
+                  scale: position === 0 ? 1 : 0.8,
+                  opacity: position === 0 ? 1 : 0.4,
+                  zIndex: position === 0 ? 30 : 10,
+                }}
+                transition={{
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 30,
+                  mass: 0.8
+                }}
+                className={`absolute w-full max-w-md mx-auto cursor-pointer transition-colors ${position === 0 ? '' : 'hover:opacity-70'}`}
+                onClick={() => {
+                  if (position === -1) paginate(-1);
+                  if (position === 1) paginate(1);
+                }}
+              >
+                <div className={`bg-white/90 backdrop-blur-xl rounded-2xl p-8 border ${position === 0 ? 'shadow-[0_10px_30px_rgba(0,0,0,0.08)] border-gray-100' : 'shadow-sm border-gray-50'} flex flex-col items-center text-center mx-4`}>
+                  <div className={`w-16 h-16 rounded-full bg-white border-4 ${position === 0 ? 'border-[var(--color-nonnas-mint-light)]' : 'border-gray-100'} flex items-center justify-center text-xl font-extrabold ${position === 0 ? 'text-[var(--color-nonnas-blue)]' : 'text-gray-400'} shadow-inner mb-4 transition-colors`}>
+                    {step.number}
+                  </div>
+                  <h3 className={`text-xl font-bold mb-3 ${position === 0 ? 'text-gray-900' : 'text-gray-500'}`}>{step.title}</h3>
+                  <p className={`leading-relaxed text-sm ${position === 0 ? 'text-gray-600' : 'text-gray-400 line-clamp-3'}`}>
+                    {step.description}
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{steps[current].title}</h3>
-                <p className="text-gray-600 leading-relaxed text-sm">
-                  {steps[current].description}
-                </p>
-              </div>
-            </motion.div>
-          </AnimatePresence>
+              </motion.div>
+            );
+          })}
         </div>
 
         {/* Puntos de Paginación */}
