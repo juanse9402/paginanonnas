@@ -30,7 +30,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight mb-5 leading-tight"
+              className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-gray-900 tracking-tight mb-4 leading-tight"
             >
               Recupera tu tranquilidad sabiendo que tus padres están en las mejores manos, <br className="hidden md:block" />
               <span className="text-[var(--color-nonnas-blue)] relative inline-block mt-2">
@@ -45,7 +45,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-base md:text-lg text-gray-600 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0"
+              className="text-sm md:text-base text-gray-600 mb-6 leading-relaxed max-w-2xl mx-auto lg:mx-0"
             >
               Atención médica integral, enfermería experta y acompañamiento amoroso 24/7. Monitoreo en tiempo real para que sepas cómo están en cada momento.
             </motion.p>
@@ -58,23 +58,23 @@ export default function Hero() {
             >
               <a 
                 href="#contacto" 
-                className="w-full sm:w-auto flex flex-col items-center justify-center gap-1 bg-[var(--color-nonnas-mint)]/80 hover:bg-[var(--color-nonnas-mint)]/90 backdrop-blur-lg border border-white/50 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 shadow-[0_8px_32px_rgba(79,209,197,0.3)] hover:shadow-[0_12px_40px_rgba(79,209,197,0.5)] hover:-translate-y-1"
+                className="w-full sm:w-auto flex flex-col items-center justify-center gap-1 bg-[var(--color-nonnas-mint)]/80 hover:bg-[var(--color-nonnas-mint)]/90 backdrop-blur-lg border border-white/50 text-white px-5 py-2.5 rounded-full font-semibold transition-all duration-300 shadow-[0_8px_32px_rgba(79,209,197,0.3)] hover:shadow-[0_12px_40px_rgba(79,209,197,0.5)] hover:-translate-y-1"
               >
-                <div className="flex items-center gap-2 text-base">
+                <div className="flex items-center gap-2 text-sm">
                   Solicitar Valoración Sin Costo
-                  <ArrowRight size={18} />
+                  <ArrowRight size={16} />
                 </div>
-                <span className="text-[11px] font-normal text-teal-50 opacity-90">Respuesta inmediata sin compromiso</span>
+                <span className="text-[10px] font-normal text-teal-50 opacity-90">Respuesta inmediata sin compromiso</span>
               </a>
               
               <a 
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto flex items-center justify-center gap-2 bg-white/40 hover:bg-white/60 backdrop-blur-lg border border-white/60 text-gray-800 px-6 py-3 rounded-full font-semibold text-base transition-all duration-300 shadow-[0_8px_32px_rgba(0,0,0,0.05)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.1)] hover:-translate-y-1 group"
+                className="w-full sm:w-auto flex items-center justify-center gap-2 bg-white/40 hover:bg-white/60 backdrop-blur-lg border border-white/60 text-gray-800 px-5 py-2.5 rounded-full font-semibold text-sm transition-all duration-300 shadow-[0_8px_32px_rgba(0,0,0,0.05)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.1)] hover:-translate-y-1 group"
               >
                 Hablar con un Asesor
-                <MessageCircle size={18} className="text-green-600 group-hover:scale-110 transition-transform" />
+                <MessageCircle size={16} className="text-green-600 group-hover:scale-110 transition-transform" />
               </a>
             </motion.div>
           </div>
@@ -87,7 +87,7 @@ export default function Hero() {
             className="relative lg:ml-auto w-full max-w-md mx-auto lg:max-w-full"
           >
             {/* Contenedor principal de la imagen */}
-            <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white bg-gray-100 aspect-[4/5] md:aspect-square lg:aspect-[4/5] z-10">
+            <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white bg-gray-100 aspect-video md:aspect-[4/3] lg:aspect-[4/3] z-10">
               <img 
                 src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=800&q=80" 
                 alt="Enfermera sonriendo con adulto mayor" 
