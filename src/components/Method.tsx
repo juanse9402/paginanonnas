@@ -16,17 +16,17 @@ export default function Method() {
     },
     {
       number: "02",
-      title: "Plan de cuidado personalizado",
+      title: "Diseñamos un plan de cuidado personalizado",
       description: "Diseñamos la rutina de cuidado exacta según las necesidades específicas de tu ser querido."
     },
     {
       number: "03",
-      title: "Selección del profesional",
+      title: "Seleccionamos el profesional adecuado",
       description: "Seleccionamos el profesional adecuado y te lo presentamos para que sientas total confianza."
     },
     {
       number: "04",
-      title: "Acompañamiento y seguimiento",
+      title: "Iniciamos el acompañamiento y seguimiento continuo",
       description: "Iniciamos el acompañamiento y mantenemos un seguimiento continuo de la evolución del paciente."
     }
   ];

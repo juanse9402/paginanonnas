@@ -43,7 +43,7 @@ export default function Services() {
       btnColor: 'bg-[var(--color-nonnas-blue)] hover:bg-[var(--color-nonnas-blue-dark)]',
     },
     {
-      title: 'Supervisión Profesional',
+      title: 'Supervisión profesional de enfermería',
       price: 'Incluido en todos los servicios',
       icon: <CheckCircle2 className="w-8 h-8 text-purple-500" />,
       description: 'Todos nuestros servicios están respaldados por una enfermera profesional con más de 15 años de experiencia, quien supervisa protocolos, orienta al equipo de cuidado y garantiza que cada caso reciba la atención adecuada según sus necesidades.',
