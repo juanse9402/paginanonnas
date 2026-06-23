@@ -4,8 +4,8 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-300 py-12 border-t border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
-          <div>
+        <div className="grid md:grid-cols-4 gap-8 mb-8">
+          <div className="col-span-1 md:col-span-1">
             <h3 className="text-2xl font-bold text-white mb-4">Cuidado Nonnas</h3>
             <p className="text-gray-400 max-w-xs">
               El cuidado profesional que tus seres queridos merecen, en la comodidad de su hogar.
@@ -21,11 +21,19 @@ export default function Footer() {
               <li><a href="#contacto" className="hover:text-white transition-colors">Contacto</a></li>
             </ul>
           </div>
+
+          <div>
+            <h4 className="text-lg font-semibold text-white mb-4">Únete al Equipo</h4>
+            <ul className="space-y-2">
+              <li><a href="mailto:rrhh@cuidadosnonnas.com" className="hover:text-white transition-colors">Trabaja con nosotros</a></li>
+              <li><a href="mailto:rrhh@cuidadosnonnas.com" className="hover:text-white transition-colors text-[var(--color-nonnas-mint)]">Enviar Hoja de Vida</a></li>
+            </ul>
+          </div>
           
           <div>
             <h4 className="text-lg font-semibold text-white mb-4">Contacto</h4>
             <ul className="space-y-2 text-gray-400">
-              <li>Email: info@cuidadononnas.com</li>
+              <li>Email: soporte@cuidadosnonnas.com</li>
               <li>Teléfono: +57 317 437 3251</li>
               <li>Atención 24/7</li>
             </ul>

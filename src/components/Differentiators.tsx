@@ -6,19 +6,19 @@ import { motion } from 'framer-motion';
 export default function Differentiators() {
   const features = [
     {
-      icon: <UserCheck className="w-8 h-8 text-[var(--color-nonnas-blue)] group-hover:text-white transition-colors" />,
-      title: "Enfermeras Certificadas y con Vocación",
-      description: "Selección rigurosa y capacitación continua de nuestras auxiliares para asegurar no solo profesionalismo, sino calidez humana."
+      icon: <UserCheck className="w-8 h-8 text-teal-500 group-hover:text-white transition-colors" />,
+      title: "Perfiles Verificados (Conócela antes)",
+      description: "Recibe el perfil completo de la enfermera (foto, certificaciones y experiencia) antes de que llegue a tu hogar. Tú tienes el control."
     },
     {
-      icon: <Smartphone className="w-8 h-8 text-[var(--color-nonnas-blue)] group-hover:text-white transition-colors" />,
-      title: "Reportes Clínicos en tu Celular 24/7",
-      description: "Recibe actualizaciones en tiempo real sobre sus signos vitales, medicamentos y estado de ánimo directamente en tu dispositivo."
+      icon: <Smartphone className="w-8 h-8 text-blue-500 group-hover:text-white transition-colors" />,
+      title: "Reporte Diario por WhatsApp",
+      description: "Recibe todos los días un resumen detallado sobre los signos vitales, alimentación y estado de ánimo de tu ser querido."
     },
     {
-      icon: <ShieldCheck className="w-8 h-8 text-[var(--color-nonnas-blue)] group-hover:text-white transition-colors" />,
-      title: "Plan Médico Adaptado a sus Patologías",
-      description: "Diseñamos un plan de cuidado estrictamente a la medida de sus necesidades médicas y emocionales, para evitar complicaciones."
+      icon: <ShieldCheck className="w-8 h-8 text-purple-500 group-hover:text-white transition-colors" />,
+      title: "Cobertura 24/7 en Todo Bogotá",
+      description: "Llegamos a todas las localidades. Sin complicaciones ni largas esperas. El cuidado ideal, cuando más lo necesitas."
     }
   ];
 
