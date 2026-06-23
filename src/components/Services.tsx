@@ -1,6 +1,7 @@
 'use client';
 
-import { Activity, Heart } from 'lucide-react';
+import { HeartHandshake, Stethoscope, Syringe, CheckCircle2 } from 'lucide-react';
+import { HeartHandshake, Stethoscope, Syringe, CheckCircle2, Activity } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function Services() {
@@ -8,7 +9,7 @@ export default function Services() {
     {
       title: 'Cuidadora Básica',
       price: 'desde $90.000 / turno',
-      icon: <Heart className="w-8 h-8 text-teal-500" />,
+      icon: <HeartHandshake className="w-8 h-8 text-teal-500" />,
       description: 'Acompañamiento, higiene personal, alimentación, movilidad y compañía. Ideal para adultos mayores que necesitan ayuda diaria.',
       features: [
         'Acompañamiento y compañía',
@@ -25,7 +26,7 @@ export default function Services() {
     {
       title: 'Auxiliar de Enfermería',
       price: 'desde $110.000 / turno',
-      icon: <Activity className="w-8 h-8 text-blue-500" />,
+      icon: <Stethoscope className="w-8 h-8 text-blue-500" />,
       description: 'Todo lo de la cuidadora más: control de signos vitales, administración de medicamentos, inyecciones y cuidado postoperatorio básico.',
       features: [
         'Todo lo de Cuidadora incluido',
@@ -42,7 +43,7 @@ export default function Services() {
     {
       title: 'Enfermera Profesional',
       price: 'desde $150.000 / turno',
-      icon: <svg className="w-8 h-8 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>,
+      icon: <Syringe className="w-8 h-8 text-purple-500" />,
       description: 'Procedimientos clínicos avanzados: terapia intravenosa, manejo de heridas complejas, sondas y administración de medicamentos controlados.',
       features: [
         'Todo lo de Auxiliar incluido',

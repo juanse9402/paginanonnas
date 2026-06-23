@@ -1,22 +1,22 @@
 'use client';
 
-import { ShieldCheck, Smartphone, UserCheck } from 'lucide-react';
+import { BadgeCheck, FileHeart, MapPin } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function Differentiators() {
   const features = [
     {
-      icon: <UserCheck className="w-8 h-8 text-teal-500 group-hover:text-white transition-colors" />,
+      icon: <BadgeCheck className="w-8 h-8 text-teal-500 group-hover:text-white transition-colors" />,
       title: "Perfiles Verificados (Conócela antes)",
       description: "Recibe el perfil completo de la enfermera (foto, certificaciones y experiencia) antes de que llegue a tu hogar. Tú tienes el control."
     },
     {
-      icon: <Smartphone className="w-8 h-8 text-blue-500 group-hover:text-white transition-colors" />,
+      icon: <FileHeart className="w-8 h-8 text-blue-500 group-hover:text-white transition-colors" />,
       title: "Reporte Diario por WhatsApp",
       description: "Recibe todos los días un resumen detallado sobre los signos vitales, alimentación y estado de ánimo de tu ser querido."
     },
     {
-      icon: <ShieldCheck className="w-8 h-8 text-purple-500 group-hover:text-white transition-colors" />,
+      icon: <MapPin className="w-8 h-8 text-purple-500 group-hover:text-white transition-colors" />,
       title: "Cobertura 24/7 en Todo Bogotá",
       description: "Llegamos a todas las localidades. Sin complicaciones ni largas esperas. El cuidado ideal, cuando más lo necesitas."
     }
