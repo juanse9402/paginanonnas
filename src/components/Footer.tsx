@@ -1,3 +1,5 @@
+import { Instagram, Facebook } from 'lucide-react';
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -7,9 +9,17 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div className="col-span-1 md:col-span-1">
             <h3 className="text-2xl font-bold text-white mb-4">Cuidado Nonnas</h3>
-            <p className="text-gray-400 max-w-xs">
+            <p className="text-gray-400 max-w-xs mb-6">
               El cuidado profesional que tus seres queridos merecen, en la comodidad de su hogar.
             </p>
+            <div className="flex space-x-4">
+              <a href="https://www.instagram.com/cuidadosnonnas/" target="_blank" rel="noopener noreferrer" aria-label="Síguenos en Instagram" className="text-gray-400 hover:text-[var(--color-nonnas-mint)] transition-colors hover:scale-110 transform">
+                <Instagram size={24} />
+              </a>
+              <a href="https://www.facebook.com/profile.php?id=61583523158510" target="_blank" rel="noopener noreferrer" aria-label="Síguenos en Facebook" className="text-gray-400 hover:text-[#1877F2] transition-colors hover:scale-110 transform">
+                <Facebook size={24} />
+              </a>
+            </div>
           </div>
           
           <div>
