@@ -18,6 +18,7 @@ export default function FloatingWhatsApp() {
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Abrir chat de WhatsApp con soporte"
         className="flex items-center justify-center w-14 h-14 bg-green-500 text-white rounded-full shadow-[0_8px_30px_rgba(34,197,94,0.4)] hover:bg-green-600 hover:scale-110 active:scale-95 transition-all duration-300 relative group"
       >
         <MessageCircle size={32} className="fill-current" />

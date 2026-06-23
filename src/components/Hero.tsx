@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { ArrowRight, MessageCircle, HeartPulse, ShieldCheck } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Hero() {
   const whatsappNumber = "573174373251"; // Reemplaza con el número real
@@ -91,10 +92,13 @@ export default function Hero() {
           >
             {/* Contenedor principal de la imagen */}
             <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white bg-gray-100 aspect-video md:aspect-[4/3] lg:aspect-[4/3] z-10">
-              <img 
+              <Image 
                 src="/premium_hero.png" 
                 alt="Enfermera profesional cuidando" 
-                className="w-full h-full object-cover"
+                fill
+                priority
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover"
               />
               {/* Overlay sutil para la imagen */}
               <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-nonnas-blue-dark)]/40 to-transparent"></div>
