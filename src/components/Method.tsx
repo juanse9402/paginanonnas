@@ -11,18 +11,23 @@ export default function Method() {
   const steps = [
     {
       number: "01",
-      title: "Valoración Inicial Gratuita",
+      title: "Valoración inicial gratuita",
       description: "Evaluamos profesionalmente las necesidades de tu familiar sin ningún costo ni compromiso para ti."
     },
     {
       number: "02",
-      title: "Plan a la Medida",
-      description: "Diseñamos la rutina de cuidado exacta y te presentamos a la auxiliar ideal según su perfil y experiencia."
+      title: "Plan de cuidado personalizado",
+      description: "Diseñamos la rutina de cuidado exacta según las necesidades específicas de tu ser querido."
     },
     {
       number: "03",
-      title: "Monitoreo Constante",
-      description: "Iniciamos el servicio. Recibirás reportes diarios en tu celular para que sientas tranquilidad total."
+      title: "Selección del profesional",
+      description: "Seleccionamos el profesional adecuado y te lo presentamos para que sientas total confianza."
+    },
+    {
+      number: "04",
+      title: "Acompañamiento y seguimiento",
+      description: "Iniciamos el acompañamiento y mantenemos un seguimiento continuo de la evolución del paciente."
     }
   ];
 

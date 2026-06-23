@@ -23,7 +23,7 @@ export default function Hero() {
               transition={{ duration: 0.5 }}
             >
               <span className="inline-block py-1.5 px-4 rounded-full bg-teal-50 text-[var(--color-nonnas-blue-dark)] text-sm font-semibold mb-6 border border-teal-100 shadow-sm">
-                Cuidado Médico y Humano a Domicilio
+                Servicio Especializado
               </span>
             </motion.div>
 
@@ -34,11 +34,11 @@ export default function Hero() {
               className="text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tight mb-4 leading-tight"
             >
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-900 via-blue-800 to-gray-900">
-                Recupera tu tranquilidad sabiendo que tus padres están en las mejores manos, 
+                Cuidado profesional para adultos mayores 
               </span>
               <br className="hidden md:block" />
               <span className="text-[var(--color-nonnas-blue)] relative inline-block mt-2">
-                sin salir de casa.
+                en la comodidad de su hogar
                 <svg className="absolute w-full h-3 -bottom-1 left-0 text-[var(--color-nonnas-mint)] opacity-70" viewBox="0 0 100 10" preserveAspectRatio="none">
                   <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="4" fill="transparent" />
                 </svg>
@@ -51,8 +51,32 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-sm md:text-base text-gray-600 mb-6 leading-relaxed max-w-2xl mx-auto lg:mx-0"
             >
-              Atención médica integral, enfermería experta y acompañamiento amoroso 24/7. Monitoreo en tiempo real para que sepas cómo están en cada momento.
+              Recupera la tranquilidad de saber que tu ser querido está acompañado por personal capacitado, comprometido con su bienestar y supervisado por profesionales de enfermería.
             </motion.p>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.25 }}
+              className="mb-8 hidden md:block"
+            >
+              <h3 className="text-sm font-bold text-[var(--color-nonnas-blue-dark)] mb-3">Acompañamiento profesional pensado para el bienestar de tu familiar:</h3>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-sm text-gray-700 text-left mx-auto lg:mx-0 max-w-2xl">
+                {[
+                  "Auxiliares de enfermería capacitadas.",
+                  "Supervisión y seguimiento profesional.",
+                  "Apoyo en actividades diarias.",
+                  "Administración y control de medicamentos.",
+                  "Acompañamiento domiciliario y hospitalario.",
+                  "Atención adaptada a cada necesidad."
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <ShieldCheck className="w-4 h-4 text-[var(--color-nonnas-mint-dark)] mt-0.5 flex-shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
             
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -114,8 +138,8 @@ export default function Hero() {
                 <HeartPulse className="w-6 h-6 text-red-500" />
               </div>
               <div>
-                <p className="text-xs text-gray-500 font-medium uppercase tracking-wider">Signos Vitales</p>
-                <p className="text-gray-900 font-bold text-sm">100% Estables</p>
+                <p className="text-xs text-gray-500 font-medium uppercase tracking-wider">Monitoreo</p>
+                <p className="text-gray-900 font-bold text-sm">Seguimiento profesional</p>
               </div>
             </motion.div>
 
@@ -129,7 +153,7 @@ export default function Hero() {
                 <ShieldCheck className="w-5 h-5 text-[var(--color-nonnas-mint-dark)]" />
               </div>
               <div>
-                <p className="text-gray-900 font-bold text-sm">Soporte 24/7</p>
+                <p className="text-gray-900 font-bold text-sm leading-tight max-w-[150px]">Coordinación y atención permanente para tu tranquilidad</p>
               </div>
             </motion.div>
 
