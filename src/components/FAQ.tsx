@@ -17,14 +17,6 @@ export default function FAQ() {
       answer: "Sí. Contamos con diferentes modalidades de servicio que se adaptan a las necesidades de cada familia, desde acompañamientos por horas hasta jornadas más amplias o servicios continuos."
     },
     {
-      question: "¿Realizan acompañamiento hospitalario?",
-      answer: "Sí. Nuestro personal puede acompañar al paciente durante hospitalizaciones, procedimientos médicos, recuperaciones postoperatorias o estancias temporales en centros de salud, brindando apoyo tanto al paciente como a su familia."
-    },
-    {
-      question: "¿Administran medicamentos?",
-      answer: "Sí. Las auxiliares de enfermería pueden administrar medicamentos siguiendo las indicaciones médicas previamente establecidas y realizar el seguimiento correspondiente para garantizar el cumplimiento del tratamiento."
-    },
-    {
       question: "¿Cómo seleccionan al personal?",
       answer: "Realizamos un proceso de selección y validación que incluye revisión de experiencia, referencias laborales y verificación de antecedentes, con el objetivo de garantizar profesionales confiables y capacitados para el cuidado de nuestros usuarios."
     },
@@ -33,20 +25,8 @@ export default function FAQ() {
       answer: "Entendemos que cada familia y cada adulto mayor tienen necesidades diferentes. Si por cualquier motivo es necesario realizar un cambio, buscamos otro profesional que se adapte mejor a los requerimientos del servicio."
     },
     {
-      question: "¿Quién supervisa los servicios?",
-      answer: "Todos nuestros servicios cuentan con la supervisión de una enfermera jefe con amplia experiencia, quien orienta al equipo de cuidado, realiza seguimiento a los casos y garantiza que el servicio se preste bajo los estándares definidos por Nonnas."
-    },
-    {
       question: "¿En qué zonas prestan servicio?",
       answer: "Actualmente prestamos nuestros servicios en Bogotá y municipios de la Sabana como Chía, Cajicá, Cota y sectores cercanos. Si tienes dudas sobre una ubicación específica, nuestro equipo podrá confirmarte la cobertura disponible."
-    },
-    {
-      question: "¿Cómo puedo solicitar una valoración?",
-      answer: "Puedes contactarnos por WhatsApp, por nuestras redes sociales o correo electrónico, para programar una valoración inicial gratuita. Analizaremos las necesidades de tu familiar y te recomendaremos la opción de cuidado más adecuada."
-    },
-    {
-      question: "¿Los servicios son personalizados?",
-      answer: "Sí. Cada adulto mayor tiene necesidades, rutinas y condiciones diferentes. Por eso diseñamos planes de cuidado personalizados que se adaptan a cada caso y evolucionan según sus necesidades."
     }
   ];
 

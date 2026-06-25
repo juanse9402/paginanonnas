@@ -2,7 +2,6 @@ import Hero from '@/components/Hero';
 import SocialProof from '@/components/SocialProof';
 import Marquee from '@/components/Marquee';
 import TrustBlock from '@/components/TrustBlock';
-import History from '@/components/History';
 import Services from '@/components/Services';
 import Method from '@/components/Method';
 import Guarantee from '@/components/Guarantee';
@@ -16,7 +15,6 @@ export default function Home() {
       <Hero />
       <SocialProof />
       <Marquee />
-      <History />
       <Services />
       <Method />
       <TrustBlock />
