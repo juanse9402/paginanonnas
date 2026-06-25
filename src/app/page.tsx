@@ -4,7 +4,6 @@ import Marquee from '@/components/Marquee';
 import TrustBlock from '@/components/TrustBlock';
 import History from '@/components/History';
 import Services from '@/components/Services';
-import Differentiators from '@/components/Differentiators';
 import Method from '@/components/Method';
 import Guarantee from '@/components/Guarantee';
 import Testimonials from '@/components/Testimonials';
@@ -22,7 +21,6 @@ export default function Home() {
       <Method />
       <TrustBlock />
       <Guarantee />
-      <Differentiators />
       <Testimonials />
       <FAQ />
       <ContactForm />

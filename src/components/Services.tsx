@@ -12,9 +12,7 @@ export default function Services() {
       description: 'Acompañamiento, higiene personal, alimentación, movilidad y compañía. Ideal para adultos mayores que necesitan ayuda diaria.',
       features: [
         'Acompañamiento cálido para evitar la soledad',
-        'Mantenemos su bienestar, dignidad y calidad de vida',
         'Aseguramos una alimentación adecuada y saludable',
-        'Fomentamos su movilidad para preservar su independencia',
         'Te mantenemos informado para tu total tranquilidad'
       ],
       badge: 'Básico',
@@ -30,11 +28,6 @@ export default function Services() {
       features: [
         'Aseguramos que siga correctamente sus tratamientos',
         'Monitoreo de signos vitales para prevenir complicaciones',
-        'Mantenemos su bienestar, dignidad y calidad de vida',
-        'Fomentamos su movilidad y apoyamos su recuperación',
-        'Acompañamiento seguro en traslados y citas médicas',
-        'Cuidados especializados para una recuperación óptima',
-        'Cumplimiento estricto de indicaciones médicas',
         'Reportes periódicos para devolverte la tranquilidad'
       ],
       badge: 'Recomendado',
@@ -48,9 +41,8 @@ export default function Services() {
       icon: <CheckCircle2 className="w-8 h-8 text-purple-500" />,
       description: 'Todos nuestros servicios están respaldados por una enfermera profesional con más de 15 años de experiencia, quien supervisa protocolos, orienta al equipo de cuidado y garantiza que cada caso reciba la atención adecuada según sus necesidades.',
       features: [
-        'Supervisión de protocolos',
+        'Supervisión estricta de protocolos',
         'Orientación al equipo de cuidado',
-        'Garantía de atención adecuada',
         'Respaldo clínico constante'
       ],
       badge: 'Respaldo',

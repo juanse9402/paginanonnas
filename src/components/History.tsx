@@ -22,7 +22,7 @@ export default function History() {
               {/* Placeholder image. User can update this to an actual photo of the founder or team */}
               <Image 
                 src="/history_care.png" 
-                alt="Enfermera a domicilio de Cuidado Nonnas acompañando a un adulto mayor" 
+                alt="Enfermera a domicilio de Cuidados Nonnas acompañando a un adulto mayor" 
                 fill
                 className="object-cover"
               />

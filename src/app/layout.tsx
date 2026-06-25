@@ -12,13 +12,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Cuidado Nonnas | Enfermeras a Domicilio en Bogotá",
+  title: "Cuidados Nonnas | Enfermeras a Domicilio en Bogotá",
   description: "Cuidado de adultos mayores y enfermería a domicilio 24/7 en Bogotá. Perfiles verificados, reporte diario y atención premium para tu tranquilidad.",
   keywords: [
     "enfermeras a domicilio bogota", 
     "cuidado de adultos mayores bogota", 
     "enfermeria 24 horas bogota", 
-    "cuidado nonnas", 
+    "cuidados nonnas", 
     "auxiliar de enfermeria bogota", 
     "cuidado postoperatorio en casa",
     "agencia de enfermeras bogota",
@@ -31,18 +31,18 @@ export const metadata: Metadata = {
     "enfermeras por turnos bogota",
     "cuidado de pacientes postrados"
   ],
-  authors: [{ name: "Cuidado Nonnas" }],
+  authors: [{ name: "Cuidados Nonnas" }],
   openGraph: {
-    title: "Cuidado Nonnas | Enfermeras a Domicilio en Bogotá",
+    title: "Cuidados Nonnas | Enfermeras a Domicilio en Bogotá",
     description: "Cuidado de adultos mayores y enfermería a domicilio 24/7 en Bogotá. Perfiles verificados y atención premium.",
     url: 'https://www.cuidadononnas.com',
-    siteName: 'Cuidado Nonnas',
+    siteName: 'Cuidados Nonnas',
     images: [
       {
         url: '/premium_hero.png',
         width: 1200,
         height: 630,
-        alt: 'Enfermera de Cuidado Nonnas cuidando a un adulto mayor',
+        alt: 'Enfermera de Cuidados Nonnas cuidando a un adulto mayor',
       },
     ],
     locale: 'es_CO',
@@ -78,7 +78,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "MedicalBusiness",
-              "name": "Cuidado Nonnas",
+              "name": "Cuidados Nonnas",
               "image": "https://www.cuidadononnas.com/premium_hero.png",
               "url": "https://www.cuidadononnas.com",
               "telephone": "+573174373251",

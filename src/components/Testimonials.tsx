@@ -8,7 +8,7 @@ export default function Testimonials() {
     {
       name: "María Fernanda G.",
       relation: "Hija de paciente (78 años)",
-      text: "Vivía angustiada por mi mamá mientras trabajaba. Desde que contratamos a Cuidado Nonnas, me envían fotos y reportes diarios. Por fin puedo dormir tranquila sabiendo que está bien atendida.",
+      text: "Vivía angustiada por mi mamá mientras trabajaba. Desde que contratamos a Cuidados Nonnas, me envían fotos y reportes diarios. Por fin puedo dormir tranquila sabiendo que está bien atendida.",
       rating: 5,
     },
     {

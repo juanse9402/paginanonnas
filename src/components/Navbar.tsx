@@ -40,14 +40,14 @@ export default function Navbar() {
               {!logoError ? (
                 <img 
                   src="/logo.png" 
-                  alt="Cuidado Nonnas Logo" 
+                  alt="Cuidados Nonnas Logo" 
                   className="h-28 md:h-36 w-auto object-contain"
                   onError={() => setLogoError(true)}
                 />
               ) : (
                 <div className="flex items-center gap-2 text-2xl font-bold text-[var(--color-nonnas-blue)] mt-6">
                   <HeartHandshake className="h-8 w-8 text-[#2B6CB0]" />
-                  <span>Cuidado Nonnas</span>
+                  <span>Cuidados Nonnas</span>
                 </div>
               )}
             </a>
