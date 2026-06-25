@@ -71,6 +71,32 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className={`${inter.variable} h-full antialiased`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "MedicalBusiness",
+              "name": "Cuidado Nonnas",
+              "image": "https://www.cuidadononnas.com/premium_hero.png",
+              "url": "https://www.cuidadononnas.com",
+              "telephone": "+573174373251",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Bogotá",
+                "addressRegion": "Bogotá D.C.",
+                "addressCountry": "CO"
+              },
+              "description": "Cuidado de adultos mayores y enfermería a domicilio 24/7 en Bogotá. Perfiles verificados y atención premium.",
+              "sameAs": [
+                "https://www.instagram.com/cuidadosnonnas/",
+                "https://www.facebook.com/profile.php?id=61583523158510"
+              ]
+            })
+          }}
+        />
+      </head>
       <body className="min-h-full flex flex-col">
         <Topbar />
         <Navbar />

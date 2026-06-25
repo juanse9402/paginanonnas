@@ -95,7 +95,7 @@ export default function Hero() {
             <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white bg-gray-100 aspect-video md:aspect-[4/3] lg:aspect-[4/3] z-10">
               <Image 
                 src="/premium_hero.png" 
-                alt="Enfermera profesional cuidando" 
+                alt="Enfermera profesional cuidando a un adulto mayor a domicilio en Bogotá" 
                 fill
                 priority
                 sizes="(max-width: 768px) 100vw, 50vw"
