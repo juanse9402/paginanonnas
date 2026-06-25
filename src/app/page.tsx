@@ -17,10 +17,10 @@ export default function Home() {
       <Hero />
       <SocialProof />
       <Marquee />
-      <TrustBlock />
       <History />
       <Services />
       <Method />
+      <TrustBlock />
       <Guarantee />
       <Differentiators />
       <Testimonials />

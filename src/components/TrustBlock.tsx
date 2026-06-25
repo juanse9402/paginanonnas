@@ -1,36 +1,49 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { UserCheck, Stethoscope, Clock, ShieldAlert, Heart } from 'lucide-react';
 
 export default function TrustBlock() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
   const items = [
     {
-      icon: <UserCheck className="w-6 h-6 text-teal-600" />,
+      icon: <UserCheck className="w-8 h-8 text-teal-600" />,
       title: "Personal cuidadosamente seleccionado",
       description: "Perfiles verificados y evaluados para garantizar la mejor atención."
     },
     {
-      icon: <Stethoscope className="w-6 h-6 text-blue-600" />,
+      icon: <Stethoscope className="w-8 h-8 text-blue-600" />,
       title: "Supervisión permanente",
       description: "Respaldo continuo de enfermería profesional en cada caso."
     },
     {
-      icon: <Clock className="w-6 h-6 text-purple-600" />,
+      icon: <Clock className="w-8 h-8 text-purple-600" />,
       title: "Seguimiento periódico",
       description: "Reportes constantes para la tranquilidad de los familiares."
     },
     {
-      icon: <ShieldAlert className="w-6 h-6 text-rose-600" />,
+      icon: <ShieldAlert className="w-8 h-8 text-rose-600" />,
       title: "Protocolos de calidad y seguridad",
       description: "Estándares estrictos para el cuidado en el hogar."
     },
     {
-      icon: <Heart className="w-6 h-6 text-red-500" />,
+      icon: <Heart className="w-8 h-8 text-red-500" />,
       title: "Atención personalizada",
       description: "Nos adaptamos a las rutinas y necesidades de cada familia."
     }
   ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % items.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, [items.length]);
+
+  const nextSlide = () => setCurrentIndex((prev) => (prev + 1) % items.length);
+  const prevSlide = () => setCurrentIndex((prev) => (prev - 1 + items.length) % items.length);
 
   return (
     <section className="py-24 bg-white relative overflow-hidden">
@@ -52,24 +65,49 @@ export default function TrustBlock() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-6 gap-8 lg:gap-12 justify-center max-w-6xl mx-auto">
-          {items.map((item, index) => (
+        <div className="relative max-w-2xl mx-auto h-[350px] md:h-[300px]">
+          {/* Zonas de hover para navegación */}
+          <div 
+            className="absolute top-0 left-0 w-1/2 h-full z-20 cursor-pointer"
+            onMouseEnter={prevSlide}
+          />
+          <div 
+            className="absolute top-0 right-0 w-1/2 h-full z-20 cursor-pointer"
+            onMouseEnter={nextSlide}
+          />
+
+          <AnimatePresence mode="wait">
             <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`flex flex-col items-center text-center ${index < 3 ? 'md:col-span-2' : 'md:col-span-3'}`}
+              key={currentIndex}
+              initial={{ opacity: 0, x: 50, scale: 0.95 }}
+              animate={{ opacity: 1, x: 0, scale: 1 }}
+              exit={{ opacity: 0, x: -50, scale: 0.95 }}
+              transition={{ duration: 0.4, ease: "easeInOut" }}
+              className="absolute inset-0 flex flex-col items-center justify-center bg-white rounded-[2rem] p-8 md:p-12 shadow-[0_15px_40px_rgba(0,0,0,0.08)] border border-gray-100 text-center"
             >
-              <div className="w-16 h-16 rounded-2xl bg-gray-50 flex items-center justify-center mb-6 shadow-sm border border-gray-100">
-                {item.icon}
+              <div className="w-20 h-20 rounded-2xl bg-gray-50 flex items-center justify-center mb-6 shadow-sm border border-gray-100">
+                {items[currentIndex].icon}
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
-              <p className="text-gray-600 leading-relaxed text-sm md:text-base">
-                {item.description}
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">{items[currentIndex].title}</h3>
+              <p className="text-gray-600 leading-relaxed text-lg">
+                {items[currentIndex].description}
               </p>
             </motion.div>
+          </AnimatePresence>
+        </div>
+
+        {/* Indicadores (Puntos) */}
+        <div className="flex justify-center items-center gap-3 mt-12">
+          {items.map((_, index) => (
+            <div
+              key={index}
+              onMouseEnter={() => setCurrentIndex(index)}
+              className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
+                index === currentIndex 
+                  ? 'bg-[var(--color-nonnas-blue)] w-8' 
+                  : 'bg-gray-200 w-2 hover:bg-gray-300'
+              }`}
+            />
           ))}
         </div>
       </div>
