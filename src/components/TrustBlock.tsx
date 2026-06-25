@@ -52,7 +52,7 @@ export default function TrustBlock() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 lg:gap-12 justify-center max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-6 gap-8 lg:gap-12 justify-center max-w-6xl mx-auto">
           {items.map((item, index) => (
             <motion.div
               key={index}
@@ -60,7 +60,7 @@ export default function TrustBlock() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`flex flex-col items-center text-center ${index > 2 ? 'md:col-span-1.5 lg:col-span-1' : ''}`}
+              className={`flex flex-col items-center text-center ${index < 3 ? 'md:col-span-2' : 'md:col-span-3'}`}
             >
               <div className="w-16 h-16 rounded-2xl bg-gray-50 flex items-center justify-center mb-6 shadow-sm border border-gray-100">
                 {item.icon}
