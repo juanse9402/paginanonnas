@@ -5,29 +5,24 @@ import { ShieldCheck } from 'lucide-react';
 
 export default function Guarantee() {
   return (
-    <section className="py-20 bg-white relative overflow-hidden">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section className="py-8 bg-white relative">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="bg-gradient-to-br from-[var(--color-nonnas-blue-light)] to-[var(--color-nonnas-mint-light)] rounded-[2.5rem] p-10 md:p-14 text-center shadow-2xl relative overflow-hidden border border-white/50"
+          className="bg-gradient-to-r from-[var(--color-nonnas-blue-light)] to-[var(--color-nonnas-mint-light)] rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 shadow-sm border border-blue-100"
         >
-          <div className="absolute top-0 right-0 w-64 h-64 bg-white/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-[var(--color-nonnas-blue)]/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/3"></div>
-
-          <div className="relative z-10">
-            <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-8 shadow-md">
-              <ShieldCheck className="w-10 h-10 text-[var(--color-nonnas-blue)]" />
-            </div>
-            
-            <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6 tracking-tight">
-              Nuestra Garantía
+          <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center flex-shrink-0 shadow-sm">
+            <ShieldCheck className="w-8 h-8 text-[var(--color-nonnas-blue)]" />
+          </div>
+          
+          <div className="text-center md:text-left">
+            <h2 className="text-xl font-bold text-gray-900 mb-2">
+              Garantía de Satisfacción Nonnas
             </h2>
-            
-            <p className="text-lg md:text-xl text-gray-800 font-medium max-w-2xl mx-auto leading-relaxed">
-              "Si el profesional asignado no encaja con las necesidades de tu familia, gestionamos una nueva selección inmediata para encontrar el perfil adecuado sin costo adicional."
+            <p className="text-gray-800 font-medium text-sm md:text-base leading-relaxed">
+              Si el profesional asignado no encaja con las necesidades de tu familia, gestionamos una nueva selección inmediata sin costo adicional.
             </p>
           </div>
         </motion.div>
