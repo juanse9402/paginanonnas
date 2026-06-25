@@ -21,7 +21,7 @@ export default function History() {
             <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white aspect-square max-w-md mx-auto lg:mx-0">
               {/* Placeholder image. User can update this to an actual photo of the founder or team */}
               <Image 
-                src="/premium_hero.png" 
+                src="/history_care.png" 
                 alt="Historia de Nonnas" 
                 fill
                 className="object-cover"
