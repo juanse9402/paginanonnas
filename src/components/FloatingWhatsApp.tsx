@@ -23,10 +23,10 @@ export default function FloatingWhatsApp() {
       >
         <MessageCircle size={32} className="fill-current" />
         
-        {/* Tooltip flotante */}
-        <span className="absolute right-full mr-4 bg-white text-gray-800 text-sm font-semibold px-4 py-2 rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap border border-gray-100">
-          ¿Necesitas ayuda? Chatea con nosotros
-        </span>
+        {/* Tooltip visible al hacer hover */}
+        <div className="absolute right-full mr-4 top-1/2 -translate-y-1/2 px-4 py-2 bg-white text-gray-800 text-sm font-medium rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap border border-gray-100">
+          Habla hoy con una enfermera jefe.
+        </div>
         
         {/* Efecto de pulso */}
         <span className="absolute w-full h-full rounded-full bg-green-500 opacity-50 animate-ping -z-10"></span>

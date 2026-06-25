@@ -70,7 +70,7 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto flex items-center justify-center gap-2 bg-white/30 hover:bg-white/50 backdrop-blur-xl border border-white/60 text-blue-900 px-5 py-2.5 rounded-2xl font-semibold text-sm transition-all duration-300 shadow-[0_8px_32px_rgba(0,0,0,0.05)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.1)] hover:scale-105 active:scale-95 group"
               >
-                Hablar con un Asesor
+                Habla hoy con una enfermera jefe.
                 <MessageCircle size={16} className="text-green-600 group-hover:scale-110 transition-transform" />
               </a>
             </motion.div>

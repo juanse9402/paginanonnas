@@ -116,7 +116,7 @@ export default function Services() {
                 rel="noopener noreferrer"
                 className={`mt-auto block w-full py-3 px-4 rounded-xl text-center text-white font-bold transition-all ${service.btnColor} shadow-md hover:shadow-lg`}
               >
-                Cotizar por WhatsApp
+                Habla hoy con una enfermera jefe.
               </a>
             </motion.div>
           ))}
