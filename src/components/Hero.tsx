@@ -45,15 +45,7 @@ export default function Hero() {
               </span>
             </motion.h1>
             
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-sm md:text-base text-gray-600 mb-6 leading-relaxed max-w-2xl mx-auto lg:mx-0"
-            >
-              Recupera tu paz mental con el cuidado experto que tu ser querido merece. Conectamos a tu familia con enfermeras profesionales verificadas, sin sorpresas y con reportes periódicos de tranquilidad.
-            </motion.p>
-            
+            <div className="mb-8"></div>
 
             <motion.div 
               initial={{ opacity: 0, y: 20 }}

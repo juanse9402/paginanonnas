@@ -48,7 +48,7 @@ export default function TrustBlock() {
             Tu tranquilidad comienza con nuestra rigurosidad
           </h2>
           <p className="text-lg text-gray-600">
-            Nos diferenciamos por nuestro compromiso con la excelencia y la seguridad de tus seres queridos.
+            Recupera tu paz mental con el cuidado experto que tu ser querido merece. Conectamos a tu familia con enfermeras profesionales verificadas, sin sorpresas y con reportes periódicos de tranquilidad.
           </p>
         </div>
 
