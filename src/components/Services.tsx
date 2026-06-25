@@ -93,7 +93,7 @@ export default function Services() {
                 Cotización Personalizada
               </div>
               
-              <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
+              <p className="text-gray-600 mb-6 leading-relaxed">
                 {service.description}
               </p>
 
