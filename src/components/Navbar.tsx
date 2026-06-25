@@ -68,7 +68,7 @@ export default function Navbar() {
               href="#contacto"
               className="bg-gradient-to-r from-teal-400/80 to-blue-500/80 backdrop-blur-xl border border-white/50 text-white px-6 py-2.5 rounded-2xl font-medium transition-all shadow-[0_8px_32px_rgba(43,108,176,0.2)] hover:shadow-[0_8px_32px_rgba(43,108,176,0.4)] hover:scale-105 active:scale-95"
             >
-              Cotizar Servicio
+              Valoración inicial
             </a>
           </div>
 
@@ -103,7 +103,7 @@ export default function Navbar() {
               onClick={() => setIsMobileMenuOpen(false)}
               className="block w-full text-center mt-4 bg-[var(--color-nonnas-mint)] text-white px-4 py-3 rounded-md font-medium"
             >
-              Cotizar Servicio
+              Valoración inicial
             </a>
           </div>
         </div>
