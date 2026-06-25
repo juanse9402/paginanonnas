@@ -1,150 +1,71 @@
 'use client';
 
-import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { ClipboardCheck, FileText, UserCheck, Activity } from 'lucide-react';
 
 export default function Method() {
-  const [current, setCurrent] = useState(0);
-  const [direction, setDirection] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
   const steps = [
     {
       number: "01",
-      title: "Valoración inicial gratuita",
+      icon: <ClipboardCheck className="w-8 h-8 text-[var(--color-nonnas-blue)]" />,
+      title: "Valoramos la situación de tu familiar",
       description: "Evaluamos profesionalmente las necesidades de tu familiar sin ningún costo ni compromiso para ti."
     },
     {
       number: "02",
-      title: "Diseñamos un plan de cuidado personalizado",
+      icon: <FileText className="w-8 h-8 text-[var(--color-nonnas-mint-dark)]" />,
+      title: "Diseñamos un plan personalizado",
       description: "Diseñamos la rutina de cuidado exacta según las necesidades específicas de tu ser querido."
     },
     {
       number: "03",
-      title: "Seleccionamos el profesional adecuado",
-      description: "Seleccionamos el profesional adecuado y te lo presentamos para que sientas total confianza."
+      icon: <UserCheck className="w-8 h-8 text-teal-600" />,
+      title: "Seleccionamos al profesional ideal",
+      description: "Buscamos el perfil adecuado y te lo presentamos para que sientas total confianza."
     },
     {
       number: "04",
-      title: "Iniciamos el acompañamiento y seguimiento continuo",
+      icon: <Activity className="w-8 h-8 text-blue-600" />,
+      title: "Iniciamos el acompañamiento y seguimiento",
       description: "Iniciamos el acompañamiento y mantenemos un seguimiento continuo de la evolución del paciente."
     }
   ];
-
-  useEffect(() => {
-    if (!isAutoPlaying) return;
-    const timer = setInterval(() => {
-      setDirection(1);
-      setCurrent((prev) => (prev + 1) % steps.length);
-    }, 4000);
-    return () => clearInterval(timer);
-  }, [isAutoPlaying, steps.length]);
-
-  const slideVariants = {
-    enter: (direction: number) => ({
-      x: direction > 0 ? 100 : -100,
-      opacity: 0
-    }),
-    center: {
-      zIndex: 1,
-      x: 0,
-      opacity: 1
-    },
-    exit: (direction: number) => ({
-      zIndex: 0,
-      x: direction < 0 ? 100 : -100,
-      opacity: 0
-    })
-  };
-
-  const swipeConfidenceThreshold = 10000;
-  const swipePower = (offset: number, velocity: number) => {
-    return Math.abs(offset) * velocity;
-  };
-
-  const paginate = (newDirection: number) => {
-    setIsAutoPlaying(false);
-    setDirection(newDirection);
-    setCurrent((prev) => (prev + newDirection + steps.length) % steps.length);
-  };
 
   return (
     <section id="metodo" className="py-24 bg-white relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-full bg-dots-pattern opacity-40 pointer-events-none"></div>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Nuestro Método</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Comenzar es fácil. Te acompañamos en cada paso.
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4 tracking-tight">¿Cómo funciona?</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Comenzar es fácil. Te acompañamos en cada paso con total transparencia.
           </p>
         </div>
 
-        <div 
-          className="relative h-[320px] w-full flex items-center justify-center group perspective-1000"
-          onMouseEnter={() => setIsAutoPlaying(false)}
-          onMouseLeave={() => setIsAutoPlaying(true)}
-        >
-          {steps.map((step, index) => {
-            // Calcular posiciones relativas
-            let position = 0; // 0 = centro, -1 = izquierda, 1 = derecha
-            if (index === current) position = 0;
-            else if (index === (current - 1 + steps.length) % steps.length) position = -1;
-            else if (index === (current + 1) % steps.length) position = 1;
-
-            return (
-              <motion.div
-                key={step.number}
-                initial={false}
-                animate={{
-                  x: `${position * 100}%`,
-                  scale: position === 0 ? 1 : 0.8,
-                  opacity: position === 0 ? 1 : 0.4,
-                  zIndex: position === 0 ? 30 : 10,
-                }}
-                transition={{
-                  type: "spring",
-                  stiffness: 300,
-                  damping: 30,
-                  mass: 0.8
-                }}
-                className={`absolute w-full max-w-md mx-auto cursor-pointer transition-colors ${position === 0 ? '' : 'hover:opacity-70'}`}
-                onClick={() => {
-                  if (position === -1) paginate(-1);
-                  if (position === 1) paginate(1);
-                }}
-              >
-                <div className={`bg-white/90 backdrop-blur-xl rounded-2xl p-8 border ${position === 0 ? 'shadow-[0_10px_30px_rgba(0,0,0,0.08)] border-gray-100' : 'shadow-sm border-gray-50'} flex flex-col items-center text-center mx-4`}>
-                  <div className={`w-16 h-16 rounded-full bg-white border-4 ${position === 0 ? 'border-[var(--color-nonnas-mint-light)]' : 'border-gray-100'} flex items-center justify-center text-xl font-extrabold ${position === 0 ? 'text-[var(--color-nonnas-blue)]' : 'text-gray-400'} shadow-inner mb-4 transition-colors`}>
-                    {step.number}
-                  </div>
-                  <h3 className={`text-xl font-bold mb-3 ${position === 0 ? 'text-gray-900' : 'text-gray-500'}`}>{step.title}</h3>
-                  <p className={`leading-relaxed text-sm ${position === 0 ? 'text-gray-600' : 'text-gray-400 line-clamp-3'}`}>
-                    {step.description}
-                  </p>
-                </div>
-              </motion.div>
-            );
-          })}
-        </div>
-
-        {/* Puntos de Paginación */}
-        <div className="flex justify-center gap-2 mt-6">
-          {steps.map((_, idx) => (
-            <button
-              key={idx}
-              onMouseEnter={() => {
-                setDirection(idx > current ? 1 : -1);
-                setCurrent(idx);
-                setIsAutoPlaying(false);
-              }}
-              className={`h-2 rounded-full transition-all duration-300 ${
-                idx === current 
-                  ? 'bg-[var(--color-nonnas-blue)] w-6' 
-                  : 'bg-gray-300 w-2 hover:bg-gray-400'
-              }`}
-              aria-label={`Ir al paso ${idx + 1}`}
-            />
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {steps.map((step, index) => (
+            <motion.div
+              key={step.number}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="relative bg-white rounded-2xl p-8 border border-gray-100 shadow-[0_8px_30px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] transition-all duration-300 flex flex-col group"
+            >
+              <div className="absolute top-6 right-6 text-5xl font-black text-gray-50/80 pointer-events-none transition-transform group-hover:scale-110 group-hover:text-[var(--color-nonnas-mint-light)]/30">
+                {step.number}
+              </div>
+              
+              <div className="w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center mb-6 border border-blue-100 shadow-inner relative z-10">
+                {step.icon}
+              </div>
+              
+              <h3 className="text-xl font-bold text-gray-900 mb-3 relative z-10">{step.title}</h3>
+              <p className="leading-relaxed text-gray-600 text-sm relative z-10">
+                {step.description}
+              </p>
+            </motion.div>
           ))}
         </div>
       </div>

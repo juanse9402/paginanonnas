@@ -11,11 +11,11 @@ export default function Services() {
       icon: <HeartHandshake className="w-8 h-8 text-teal-500" />,
       description: 'Acompañamiento, higiene personal, alimentación, movilidad y compañía. Ideal para adultos mayores que necesitan ayuda diaria.',
       features: [
-        'Acompañamiento y compañía',
-        'Higiene y cuidado personal',
-        'Alimentación y nutrición',
-        'Movilidad y ejercicios',
-        'Reporte diario por WhatsApp'
+        'Acompañamiento cálido para evitar la soledad',
+        'Mantenemos su bienestar, dignidad y calidad de vida',
+        'Aseguramos una alimentación adecuada y saludable',
+        'Fomentamos su movilidad para preservar su independencia',
+        'Te mantenemos informado para tu total tranquilidad'
       ],
       badge: 'Básico',
       borderColor: 'border-teal-400',
@@ -28,14 +28,14 @@ export default function Services() {
       icon: <Stethoscope className="w-8 h-8 text-blue-500" />,
       description: 'Atención integral para adultos mayores que requieren acompañamiento y supervisión profesional en su día a día.',
       features: [
-        'Administración de medicamentos',
-        'Toma de signos vitales',
-        'Higiene y cuidado personal',
-        'Apoyo en movilidad',
-        'Acompañamiento hospitalario',
-        'Cuidados post-operatorios',
-        'Seguimiento de indicaciones médicas',
-        'Reporte de novedades a la familia'
+        'Aseguramos que siga correctamente sus tratamientos',
+        'Monitoreo de signos vitales para prevenir complicaciones',
+        'Mantenemos su bienestar, dignidad y calidad de vida',
+        'Fomentamos su movilidad y apoyamos su recuperación',
+        'Acompañamiento seguro en traslados y citas médicas',
+        'Cuidados especializados para una recuperación óptima',
+        'Cumplimiento estricto de indicaciones médicas',
+        'Reportes periódicos para devolverte la tranquilidad'
       ],
       badge: 'Recomendado',
       borderColor: 'border-blue-400',
